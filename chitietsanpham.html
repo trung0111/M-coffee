@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon_io/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>MÊ COFFEE - CÀ PHÊ CHO NGƯỜI YÊU CÀ PHÊ</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root{
+            --height-navbar: 66px;
+            --primary-color:#b36e1a;
+            --black:#000;
+            --light-color:#666;
+            --box-shadow:0px 0px 13px 0px #00000040;
+            --border:.2rem solid rgba(0,0,0,.1);
+            --outline:.1rem solid rgba(0,0,0,.1);
+            --outline-hover:.2rem solid var(--black);
+            --background-product: #fff2d9;
+        }
+
+        .active {
+            background-color: var(--primary-color) !important;
+            color: #fff !important;
+            border-color: var(--primary-color) !important;
+        }
+
+        section#detail-product-item {
+            padding: 0;
+        }
+
+        .detail-product-item {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .detail-product-item > div:first-child {
+            border-bottom: 1px solid #ccc;
+            padding: 140px 0 50px;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .detail-product-item img {
+            border-radius: 14px;
+            width: 50%;
+            height: auto;
+        }
+
+        .detail-product-item .container-item {
+            width: 50%;
+            padding: 0 20px;
+            margin-left: 32px;
+        }
+
+        .container-item .info-item {
+            margin-bottom: 28px;
+        }
+
+        .container-item .info-item h3{
+            font-size: 32px;
+        }
+
+        .container-item .info-item p{
+            font-size: 24px;
+            color: #da7720;
+            font-weight: 500;
+        }
+
+        .container-item .choose-item {
+            margin-bottom: 32px;
+        }
+
+        .container-item .choose-item > p {
+            font-size: 16px;
+        }
+
+        .container-item .choose-item .choose-item-box {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .container-item .choose-item .choose-item-box p > i {
+            padding: 0 8px;
+            margin-right: 4px;
+        }
+
+        .container-item .choose-item .choose-item-box p:first-child > i {
+            font-size: 12px;
+        }
+
+        .container-item .choose-item .choose-item-box p:nth-child(2) > i {
+            font-size: 16px;
+        }
+
+        .container-item .choose-item .choose-item-box p:last-child > i {
+            font-size: 20px;
+        }
+
+        .container-item .choose-item .choose-item-box p {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid #aeaeae;
+            margin-bottom: 20px;
+            font-size: 15px;
+            color: #666;
+            min-width: max-content;
+            cursor: pointer;
+        }
+
+        .container-item .choose-item .choose-item-box p:not(:last-child) {
+            margin-right: 16px;
+        }
+        
+        .container-item .btn-order-now {
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            background-color: var(--primary-color);
+        }
+
+        .container-item .btn-order-now:hover {
+            cursor: pointer;
+            background-color: #f7a427;
+        }
+
+        .container-item .btn-order-now > i{
+            margin-right: 10px;
+        }
+
+        .detail-product-item .desc-item {
+            margin: 20px 0;
+        }
+
+        .detail-product-item .desc-item h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .detail-product-item .desc-item p {
+            font-size: 13px;
+            color: #414141;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- header section starts  -->
+
+    <header class="header" id="header">
+
+        <a href="http://127.0.0.1:5500/index.html" class="logo"><img src="/image/Mê-coffee-LOGO(light).png" alt="MÊ coffee - Cà phê cho người yêu cà phê"></a>
+    
+        <nav class="navbar">
+            <a href="sanpham.html">Menu</a>
+            <a href="chuyennha.html">Chuyện nhà MÊ</a>
+            <a href="danhgia.html">Feedback</a>
+            <a href="thanhtoan.html">Thanh toán</a>
+        </nav>
+    
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+    
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="image/cafe5.webp" alt="">
+                <div class="content">
+                    <h3>Đường đen Marble Latte</h3>
+                    <span class="price">55.000 đ/-</span>
+                    <span class="quantity">slg : 01</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="image/cafe4.webp" alt="">
+                <div class="content">
+                    <h3>Bạc Sỉu</h3>
+                    <span class="price">29.000 đ/-</span>
+                    <span class="quantity">slg : 01</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="image/banh6.webp" alt="">
+                <div class="content">
+                    <h3>Mochi Kem Phúc Bồn Tử</h3>
+                    <span class="price">19.000 đ/-</span>
+                    <span class="quantity">slg : 01</span>
+                </div>
+            </div>
+            <div class="total"> Total : 93.000 đ</div>
+            <a href="#" class="btn">Thanh toán</a>
+        </div>
+    
+        <form action="" class="login-form">
+            <h3>Đăng nhập</h3>
+            <input type="email" placeholder="Email" class="box">
+            <input type="password" placeholder="Mật khẩu" class="box">
+            <p>Quên mật khẩu? <a href="#">Click</a></p>
+            <p>Bạn chưa có tài khoản <a href="#">Tạo tài khoản </a></p>
+            <input type="submit" value="Đăng nhập" class="btn">
+        </form>
+    
+    </header>
+
+<!-- header section ends -->
+</section>
+
+<section class="detail-product-item" id="detail-product-item">
+    <div>
+        <img src="/image/img-chitietsp.webp" alt="" class="img-item">
+        <div class="container-item">
+            <div class="info-item">
+                <h3>Phin Sữa Tươi Bánh Flan</h3>
+                <p>49.000 đ</p>
+            </div>
+            <div class="choose-item size-item">
+                <p>Chọn size (bắt buộc)</p>
+                <div class="choose-item-box">
+                    <p><i class="fa-solid fa-mug-hot"></i>Nhỏ + 0 đ</p>
+                    <p><i class="fa-solid fa-mug-hot"></i>Vừa + 6.000 đ</p>
+                    <p><i class="fa-solid fa-mug-hot"></i>Lớn + 16.000 đ</p>
+                </div>
+            </div>
+            <div class="choose-item topping-item">
+                <p>Topping</p>
+                <div class="choose-item-box">
+                    <p>Kem Phô Mai Machiato + 10.000 đ</p>
+                    <p>Shot Espress + 10.000 đ</p>
+                    <p>Trân Trâu Trắng + 10.000 d</p>
+                    <p>Thạch Cà Phê + 10.000 d</p>
+                    <p>Bánh Flan + 15.000 đ</p>
+                </div>
+            </div>
+            <p class="btn-order-now"><i class="fa-solid fa-truck"></i>Đặt giao tận nơi</p>
+        </div>
+    </div>
+    <div class="desc-item">
+        <h3>Mô tả sản phẩm</h3>
+        <p>Cho ngày thêm tươi, tỉnh, êm, mượt với Trà Xanh Espresso Marble. Đây là sự mai mối bất ngờ giữa trà xanh Tây Bắc vị mộc và cà phê Arabica Đà Lạt. Muốn ngày thêm chút highlight, nhớ tìm đến sự bất ngờ này bạn nhé!</p>
+    </div>
+</section>
+
+
+
+<!-- footer section starts  -->
+<section class="footer">
+    <div class="box-container">
+
+        <div class="box">
+            <h3> MÊ coffee <br> <span>CÀ PHÊ CHO NGƯỜI YÊU CÀ PHÊ</span> </h3>
+            <p>Mạng xã hội - Social</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Liên hệ</h3>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> +1900 2023 </a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> mecoffee@gmail.com </a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>173c Đ. Trường Chinh, Khương Mai, Thanh Xuân, Hà Nội</a>
+            <iframe class="map-store" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14897.216744058987!2d105.84486855943896!3d21.020511401326218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad1ef4017755%3A0x6749bae8cdbf0b98!2sM%C3%AA%20Ly%20Coffee!5e0!3m2!1svi!2s!4v1698693888277!5m2!1svi!2s" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="box">
+            <h3>Điều khoản</h3>
+            <a href="#" class="links"> Điều khoản sử dụng</a>
+            <a href="#" class="links"> Chính sách bảo mật thông tin </a>
+            <a href="#" class="links"> Hướng dẫn xuất hóa đơn GTGT </a>
+        </div>
+
+        <div class="box">
+            <h3>Phản hồi</h3>
+            <p>Hãy để lại email của bạn </p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="Gửi" class="btn">
+            <img src="image/payment.png" class="payment-img" alt="">
+        </div>
+
+    </div>
+
+    <div class="credit">  <span> MÊ COFFEE </span> | CÀ PHÊ CHO NGƯỜI YÊU CÀ PHÊ </div>
+
+    <div class="move-head-page"><a href="#detail-product-item" title="Lên đầu trang"><i class="fa-solid fa-angle-up"></i></a></div>
+
+</section>
+
+
+<!-- footer section ends -->
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+</body>
+</html>
