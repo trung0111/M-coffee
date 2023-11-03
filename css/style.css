@@ -509,7 +509,6 @@ section.home{
 #review {
     padding-bottom: 10rem;
     margin-top: 3rem;
-    background-image: url(/image/img-reviews.png);
     background-position: center;
 }
 
@@ -666,7 +665,6 @@ section.home{
 .footer {
     margin-top: 50px;
     position: relative;
-    background-image: url(/image/img-footer.jpg);
     background-size: cover;
     background-position-y: -280px;
 }
